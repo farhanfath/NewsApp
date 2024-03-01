@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NewsAppProject</string>
+    <string name="app_name">NewsApp</string>
 
     <string name="unknown">Tidak Diketahui</string>
     <string name="terkini">Berita Terkini</string>

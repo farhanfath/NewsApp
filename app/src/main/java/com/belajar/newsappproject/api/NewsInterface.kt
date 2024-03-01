@@ -1,4 +1,4 @@
-package com.belajar.newsappproject.network
+package com.belajar.newsappproject.api
 
 import com.belajar.newsappproject.data.News
 import retrofit2.Call
@@ -7,9 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-const val BASE_URL = "https://newsapi.org/"
-const val API_KEY = "961e7609fd264e679b86297ff001344d"
-
+const val BASE_URL = "BASE_URL"
+const val API_KEY = "API_KEY"
 
 interface NewsInterface {
 

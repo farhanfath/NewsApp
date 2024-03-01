@@ -1,5 +1,6 @@
 package com.belajar.newsappproject.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -20,7 +21,7 @@ class HeadLineAdapter(private val context : Context) : RecyclerView.Adapter<Head
     private val articles : ArrayList<Article> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view : View = LayoutInflater.from(context).inflate(R.layout.single_headlines, parent, false)
+        val view : View = LayoutInflater.from(context).inflate(R.layout.newsheadline, parent, false)
         return ViewHolder(view)
     }
 
@@ -47,7 +48,6 @@ class HeadLineAdapter(private val context : Context) : RecyclerView.Adapter<Head
         //datetv
         holder.date.text = outputDate
 
-
         //newsImage
         Glide.with(context)
             .load(article.urlToImage)
@@ -60,7 +60,6 @@ class HeadLineAdapter(private val context : Context) : RecyclerView.Adapter<Head
             newsWeb.putExtra("url", article.url)
             holder.itemView.context.startActivity(newsWeb)
         }
-
     }
 
     override fun getItemCount(): Int {
@@ -68,17 +67,19 @@ class HeadLineAdapter(private val context : Context) : RecyclerView.Adapter<Head
     }
 
     class ViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
-        val imageView : ImageView = itemView.findViewById(R.id.imageView_singleHeadline)
-        val title : TextView = itemView.findViewById(R.id.title_singleHeadline)
-        val author : TextView = itemView.findViewById(R.id.author_singleHeadline)
-        val date : TextView = itemView.findViewById(R.id.date_singleHeadline)
+        val imageView : ImageView = itemView.findViewById(R.id.headlineImgView)
+        val title : TextView = itemView.findViewById(R.id.headlineTitleTv)
+        val author : TextView = itemView.findViewById(R.id.headlineAuthorTv)
+        val date : TextView = itemView.findViewById(R.id.headlineDateTv)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun clear() {
         articles.clear()
         notifyDataSetChanged()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addAll(art: List<Article>) {
         articles.addAll(art)
         notifyDataSetChanged()

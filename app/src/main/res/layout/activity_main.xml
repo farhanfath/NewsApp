@@ -69,8 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    tools:listitem="@layout/single_all_news"
-                    >
+                    tools:listitem="@layout/newseverything">
 
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
@@ -80,7 +79,7 @@
                 android:id="@+id/progressBar_ActivityMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +89,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

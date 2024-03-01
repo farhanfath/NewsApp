@@ -20,7 +20,7 @@ class AllNewsAdapter(private val context : Context) : RecyclerView.Adapter<AllNe
     private var articles : ArrayList<Article> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view : View =  LayoutInflater.from(context).inflate(R.layout.single_all_news, parent, false)
+        val view : View =  LayoutInflater.from(context).inflate(R.layout.newseverything, parent, false)
         return ViewHolder(view)
     }
 
@@ -69,10 +69,10 @@ class AllNewsAdapter(private val context : Context) : RecyclerView.Adapter<AllNe
     }
 
     class ViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
-        val imageView : ImageView = itemView.findViewById(R.id.imageView_singleAllNews)
-        val title : TextView = itemView.findViewById(R.id.title_singleAllNews)
-        val author : TextView = itemView.findViewById(R.id.author_singleAllNews)
-        val date : TextView = itemView.findViewById(R.id.date_singleAllNews)
+        val imageView : ImageView = itemView.findViewById(R.id.everythingImgView)
+        val title : TextView = itemView.findViewById(R.id.everythingTitleTv)
+        val author : TextView = itemView.findViewById(R.id.everythingAuthorTv)
+        val date : TextView = itemView.findViewById(R.id.everythingDateTv)
     }
 
     fun clear() {

@@ -12,7 +12,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.belajar.newsappproject.adapter.AllNewsAdapter
 import com.belajar.newsappproject.adapter.HeadLineAdapter
 import com.belajar.newsappproject.data.News
-import com.belajar.newsappproject.network.NewsService
+import com.belajar.newsappproject.api.NewsService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -69,7 +69,8 @@ class MainActivity : AppCompatActivity() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
 
-                if(totalAllNews > allNewsLayoutManager.itemCount && allNewsLayoutManager.findFirstVisibleItemPosition() >= allNewsLayoutManager.itemCount -1) {
+                if(totalAllNews > allNewsLayoutManager.itemCount &&
+                    allNewsLayoutManager.findFirstVisibleItemPosition() >= allNewsLayoutManager.itemCount -1) {
                     pageNum++
                     getAllNews()
                 }
@@ -94,7 +95,7 @@ class MainActivity : AppCompatActivity() {
 
         //memanggil object dari NewsInterface
 
-        val news = NewsService.newsInstance.getAllNews("keuangan",pageNum)
+        val news = NewsService.newsInstance.getAllNews("perbankan",pageNum)
         news.enqueue(object : Callback<News> {
             override fun onResponse(call: Call<News>, response: Response<News>) {
                 val allNews = response.body()
@@ -134,5 +135,4 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
 }
