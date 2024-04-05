@@ -16,8 +16,65 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="16dp"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:text="@string/terkini"-->
+<!--                android:textColor="@color/mainText"-->
+<!--                android:textSize="22sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/terkinirv"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="350dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="16dp"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:text="@string/semua"-->
+<!--                android:textColor="@color/mainText"-->
+<!--                android:textSize="22sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/terkinirv" />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/semuaBeritarv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="410dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView2"-->
+<!--                tools:listitem="@layout/newseverything" />-->
+
+<!--            <ProgressBar-->
+<!--                android:id="@+id/progressBar_ActivityMain"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:visibility="invisible"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/semuaBeritarv"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:visibility="visible" />-->
+
             <LinearLayout
-                android:id="@+id/terkiniLayout"
+                android:id="@+id/layoutTerkini"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -44,14 +101,13 @@
 
             </LinearLayout>
 
-
             <LinearLayout
-                android:id="@+id/semuaBeritaLayout"
+                android:id="@+id/layoutSemuaBerita"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginBottom="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/terkiniLayout">
+                app:layout_constraintTop_toBottomOf="@+id/layoutTerkini">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -69,23 +125,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    tools:listitem="@layout/newseverything">
-
-                </androidx.recyclerview.widget.RecyclerView>
+                    tools:listitem="@layout/newseverything"/>
             </LinearLayout>
-
-
-            <ProgressBar
-                android:id="@+id/progressBar_ActivityMain"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.37" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

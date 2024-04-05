@@ -2,13 +2,8 @@ package com.belajar.newsappproject.api
 
 import com.belajar.newsappproject.data.News
 import retrofit2.Call
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
-
-const val BASE_URL = "BASE_URL"
-const val API_KEY = "API_KEY"
 
 interface NewsInterface {
 
@@ -23,16 +18,20 @@ interface NewsInterface {
         @Query("q") query: String,
         @Query("Page") page: Int
     ): Call<News>
-}
 
-object NewsService {
-    val newsInstance: NewsInterface
-
-    init {
-        val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        newsInstance = retrofit.create(NewsInterface::class.java)
+    companion object {
+        const val API_KEY = "961e7609fd264e679b86297ff001344d"
     }
 }
+
+//object NewsService {
+//    val newsInstance: NewsInterface
+//
+//    init {
+//        val retrofit = Retrofit.Builder()
+//            .baseUrl(BASE_URL)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//        newsInstance = retrofit.create(NewsInterface::class.java)
+//    }
+//}
