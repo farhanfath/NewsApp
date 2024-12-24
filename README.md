@@ -1,4 +1,4 @@
-<img src="newsSphere.png" alt="news app">
+<img src="demo-news.png" alt="news app">
 
 # NewsSphere
 
