@@ -71,4 +71,13 @@ dependencies {
 
     //webView
     implementation ("androidx.webkit:webkit:1.10.0")
+
+    implementation  ("io.github.scwang90:refresh-layout-kernel:2.1.0")
+    implementation  ("io.github.scwang90:refresh-header-classics:2.1.0")
+    implementation  ("io.github.scwang90:refresh-header-radar:2.1.0")
+    implementation  ("io.github.scwang90:refresh-header-falsify:2.1.0")
+    implementation  ("io.github.scwang90:refresh-header-material:2.1.0")
+    implementation  ("io.github.scwang90:refresh-header-two-level:2.1.0")
+    implementation  ("io.github.scwang90:refresh-footer-ball:2.1.0")
+    implementation  ("io.github.scwang90:refresh-footer-classics:2.1.0")
 }
